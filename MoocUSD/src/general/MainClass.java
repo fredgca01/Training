@@ -20,9 +20,19 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArrayListMethodTester();
+		testfileReader();
 	}
 	
+	public static void testfileReader(){
+		FileReadertest file = new FileReadertest();
+		file.readfileinline();
+	}
+	
+	public static void testregexp(){
+		String data = "10,\"Thule Air Base\",\"Thule\",\"Greenland\",\"THU\",\"BGTL\",76.531203,-68.703161,251,-4,\"E\",\"America/Thule\"";
+		RegexpTraining train = new RegexpTraining();
+		train.testGroup();
+	}
 	
 	public static void test3(){
 		String[] data = {"Paris", "Rotterdam", "Amsterdam", "Rennes", "Caen", "Moscow", "Bamako", "Toulouse"};
