@@ -16,7 +16,7 @@ public class FileReadertest {
 	/**
 	 * read file in byte
 	 */
-	public void readfileinbyte(){
+	public void readfilein8bit(){
 		FileInputStream reader=null;
 		try {
 			reader = new FileInputStream(datafile);
@@ -33,9 +33,15 @@ public class FileReadertest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		try {
+			reader.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-	public void readfilein16byte(){
+	public void readfilein16bit(){
 		FileReader reader=null;
 		try {
 			reader = new FileReader(datafile);
@@ -48,6 +54,12 @@ public class FileReadertest {
 			while ((c = reader.read())!=-1) {
 				System.out.println(c);
 			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			reader.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -69,6 +81,12 @@ public class FileReadertest {
 			while ((line = br.readLine())!=null) {
 				System.out.println(line);
 			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			fis.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
