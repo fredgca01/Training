@@ -16,11 +16,28 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
+import general.DataStruct.Day;
+
 public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		testfileReader();
+		
+		testAnnotation();
+	}
+	
+	@SuppressWarnings("deprecation")
+	public static void testAnnotation(){
+		DataStruct.testDeprecated();
+	}
+	
+	public static void testDataStruct(){
+		DataStruct<String> test = new DataStruct<String>();
+		test.testgenerique("Coucou");
+		DataStruct<List> test2 = new DataStruct<List>();
+		test2.testgenerique(new ArrayList<>());
+		
+		test2.testEnum(Day.FRIDAY);
 	}
 	
 	public static void testfileReader(){
@@ -34,7 +51,9 @@ public class MainClass {
 		train.testGroup();
 	}
 	
-	public static void test3(){
+	public static void testLoop(){
+		ArrayListMethods.testLoop();
+		
 		String[] data = {"Paris", "Rotterdam", "Amsterdam", "Rennes", "Caen", "Moscow", "Bamako", "Toulouse"};
 		String result=null;
 		for (String city : data){

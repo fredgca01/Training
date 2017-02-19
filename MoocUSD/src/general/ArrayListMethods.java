@@ -17,11 +17,27 @@ public class ArrayListMethods
   /**
    * Constructor for objects of class ArrayListMethods
    */
-  public ArrayListMethods(ArrayList<String> arrayList)
-  {
+  public ArrayListMethods(ArrayList<String> arrayList) {
       // initialise instance variables
       list = arrayList;
   }
+  
+  public static void testLoop(){
+	  int [] numbers = {10, 20, 30, 40, 50};
+
+      for(int x : numbers ) {
+         System.out.print( x );
+         System.out.print(",");
+      }
+      System.out.print("\n");
+      String [] names = {"James", "Larry", "Tom", "Lacy"};
+
+      for( String name : names ) {
+         System.out.print( name );
+         System.out.print(",");
+      }
+  }
+  
 
   /**
    * Determines if the array list is sorted (do not sort)
