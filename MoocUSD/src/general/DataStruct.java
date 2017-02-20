@@ -20,6 +20,7 @@ public class DataStruct<T> {
 	    THURSDAY, FRIDAY, SATURDAY 
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public void testEnum(Day dDay){
 		Enumeration<String> enums;
 		Vector data = new Vector();
@@ -31,6 +32,10 @@ public class DataStruct<T> {
 		while (enums.hasMoreElements()) {
 			System.out.println(enums.nextElement()); 
 	    }
+		
+		for (Day d : Day.values()) {
+			System.out.println(d);
+		}
 		
 		if(dDay==Day.MONDAY){
 			System.out.println("C'est Lundi");
