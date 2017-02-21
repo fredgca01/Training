@@ -22,8 +22,13 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		testStream();
 		
-		testDataStruct();
+	}
+	
+	public static void testStream(){
+		StreamTest stream = new StreamTest();
+		stream.testStreamWithAirport();
 	}
 	
 	@SuppressWarnings("deprecation")
