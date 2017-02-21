@@ -6,22 +6,36 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
 public class MainClass {
+	
+	//public class AirportComparator implements Comparator<Airport> {
+	  //  public int compare(Airport emp1, Airport emp2){
+	    //   return emp1.getShortName().compareTo(emp2.getShortName());
+	    //}
+	//}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
 			List<Airport> data = fileParsing();
 			
+			//using collections
+			//Collections.sort(data,new MainClass().new AirportComparator());
+			
+			//using lambda
+			Collections.sort(data,(x,y) -> x.getShortName().compareTo(y.getShortName()));
+			
 			//tri dans l'ordre
 			Airport [] sortedData = SortingClass.selectionSort(data.toArray(new Airport[0]));
 			
 			long begin = System.currentTimeMillis();
 			//Recherche
-			
 			//SearchingClass.linearSearch("Paris",data);
 			SearchingClass.binarySearch("Paris", sortedData); 
 			
