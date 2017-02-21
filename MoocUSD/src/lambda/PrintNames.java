@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PrintNames {
 
-	//one method per interface
+	//one method only  per interface
 	@FunctionalInterface
 	public interface Condition <T> {
 		public boolean toPrint (T element);
@@ -16,7 +16,7 @@ public class PrintNames {
 	/*public class ConditionImpl implements Condition<String> {
 		@Override
 		public boolean toPrint (String element) {
-			// La seule ligne réellement utile !
+			// La seule ligne reellement utile !
             return element.length() <= 5;
 		}
 	}*/
