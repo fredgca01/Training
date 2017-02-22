@@ -32,6 +32,11 @@ public class MainClass {
 		testArrayList.testList();
 	}
 	
+	public static void testStream(){
+		StreamTest stream = new StreamTest();
+		stream.testStreamWithAirport();
+	}
+	
 	@SuppressWarnings("deprecation")
 	public static void testAnnotation(){
 		DataStruct.testDeprecated();
