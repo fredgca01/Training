@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 public class CompoundInterest {
 	
 	public static void main(String[] args) {
+		// taxes CTO:0,6 avant IR; AV:0,85 avant IR
 		calculate(260000, 5000, 6, 18,0.85);
 		calculate(1000, 1000, 6, 16,0.85);
 	}
@@ -24,7 +25,8 @@ public class CompoundInterest {
 	        //adding yearly income
 	        amount = amount + income;
 	    }
-		//Taxe prelevement lib de 7.5%
+		//Taxe prelevement lib de 7.5% pour l'AV
 		System.out.println(decimalFormat.format(amount - amount*0.075));
+		
 	}
 }
