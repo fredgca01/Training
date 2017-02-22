@@ -8,6 +8,9 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+import collections.Airport;
+import collections.SortingClass;
+
 public class SortingClassTest {
 	public List<Airport> result;
 	

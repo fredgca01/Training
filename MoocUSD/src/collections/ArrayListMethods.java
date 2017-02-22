@@ -1,4 +1,4 @@
-package general;
+package collections;
 
 //Complete the class ArrayListMethods. It consists of four short methods
 //to manipulate an array list of strings. The method header and javadoc

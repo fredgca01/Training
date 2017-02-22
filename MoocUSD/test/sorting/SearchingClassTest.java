@@ -8,6 +8,9 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+import collections.Airport;
+import collections.SearchingClass;
+
 public class SearchingClassTest {
 	public List<Airport> data;
 	Airport result;

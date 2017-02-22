@@ -1,4 +1,4 @@
-package general;
+package language;
 
 
 //Create a class CreditCard that represents a credit card account.

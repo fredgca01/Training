@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import collections.Airport;
+
 public class AirportTest {
 	Airport o1 = new Airport("Berlin");
 	Airport o2 = new Airport("Berlin");
