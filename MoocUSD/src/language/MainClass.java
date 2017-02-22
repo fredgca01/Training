@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
-import collections.ArrayListMethods;
+import collections.ArrayListMethodsExo;
 import collections.CollectionTest;
 import collections.DataStruct;
 import collections.DataStruct.Day;
@@ -52,7 +52,7 @@ public class MainClass {
 	}
 	
 	public static void testLoop(){
-		ArrayListMethods.testLoop();
+		ArrayListMethodsExo.testLoop();
 		
 		String[] data = {"Paris", "Rotterdam", "Amsterdam", "Rennes", "Caen", "Moscow", "Bamako", "Toulouse"};
 		String result=null;

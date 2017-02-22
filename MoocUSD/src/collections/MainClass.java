@@ -82,7 +82,7 @@ public class MainClass {
 	public static void ArrayListMethodTester() {
 		//set up
         ArrayList<String> animals = new ArrayList<String>();
-        ArrayListMethods zoo = new ArrayListMethods(animals); 
+        ArrayListMethodsExo zoo = new ArrayListMethodsExo(animals); 
         zoo.list.add("ape");
         zoo.list.add("dog");
         zoo.list.add("zebra");
@@ -121,7 +121,7 @@ public class MainClass {
         
         //start with fresh array list
         animals = new ArrayList<String>();
-        zoo = new ArrayListMethods(animals); 
+        zoo = new ArrayListMethodsExo(animals); 
         
         //does empty array list work?
          System.out.println(zoo.isSorted());

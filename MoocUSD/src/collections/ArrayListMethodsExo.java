@@ -11,13 +11,13 @@ package collections;
 
 import java.util.ArrayList;
 
-public class ArrayListMethods
+public class ArrayListMethodsExo
 {
   ArrayList<String> list; //instance variable
   /**
    * Constructor for objects of class ArrayListMethods
    */
-  public ArrayListMethods(ArrayList<String> arrayList) {
+  public ArrayListMethodsExo(ArrayList<String> arrayList) {
       // initialise instance variables
       list = arrayList;
   }
