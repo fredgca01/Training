@@ -23,7 +23,13 @@ public class MainClass {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		testDataStruct();
+		testCollection();
+	}
+	
+	
+	public static void testCollection () {
+		CollectionTest testArrayList = new CollectionTest();
+		testArrayList.testList();
 	}
 	
 	@SuppressWarnings("deprecation")
