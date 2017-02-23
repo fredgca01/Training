@@ -12,7 +12,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
-import collections.DataStruct.Day;
+import collections.EnumClass.Day;
 
 public class MainClass {
 	
@@ -23,6 +23,10 @@ public class MainClass {
 	//}
 
 	public static void main(String[] args) {
+		testCollection();
+	}
+	
+	public static void testSortingExo() {
 		// TODO Auto-generated method stub
 		try {
 			List<Airport> data = fileParsing();
@@ -147,13 +151,18 @@ public class MainClass {
 	
 	public static void testCollection () {
 		CollectionTest testArrayList = new CollectionTest();
-		testArrayList.testList();
+		//testArrayList.testSet();
+		//testArrayList.testNavigableSet();
+		//testArrayList.testMap();
+		//testArrayList.testNavigableMap();
+		//testArrayList.testQueues();
+		testArrayList.testStacks();
 	}
 	
 	public static void testDataStruct(){
-		DataStruct<String> test = new DataStruct<String>();
+		EnumClass<String> test = new EnumClass<String>();
 		test.testgenerique("Coucou");
-		DataStruct<List> test2 = new DataStruct<List>();
+		EnumClass<List> test2 = new EnumClass<List>();
 		test2.testgenerique(new ArrayList<>());
 		
 		test2.testEnum(Day.FRIDAY);

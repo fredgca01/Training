@@ -18,8 +18,8 @@ import javax.swing.WindowConstants;
 
 import collections.ArrayListMethodsExo;
 import collections.CollectionTest;
-import collections.DataStruct;
-import collections.DataStruct.Day;
+import collections.EnumClass;
+import collections.EnumClass.Day;
 
 public class MainClass {
 
@@ -29,15 +29,21 @@ public class MainClass {
 		testStream();
 	}
 	
+	@Deprecated
+	public static void testDeprecated(){
+		System.out.println("call to deprecated method without Warning");
+	}
+	
 	
 	public static void testStream(){
 		StreamTest stream = new StreamTest();
-		stream.testStreamWithAirport();
+		//stream.testStreamWithAirport();
+		stream.testStream();
 	}
 	
 	@SuppressWarnings("deprecation")
 	public static void testAnnotation(){
-		DataStruct.testDeprecated();
+		testDeprecated();
 	}
 	
 	public static void testfileReader(){

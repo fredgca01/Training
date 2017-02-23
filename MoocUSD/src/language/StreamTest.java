@@ -13,6 +13,43 @@ import collections.Airport;
 
 public class StreamTest {
 
+	public void testStream() {
+		List<String> items = new ArrayList<String>();
+
+		items.add("one");
+		items.add("two");
+		items.add("three");
+
+		Stream<String> stream = items.stream();
+		Stream<String> result = stream.filter(item -> item.length()>3);
+		long count = items.stream().filter( item -> item.startsWith("t")).count();
+		System.out.println(count);
+		
+		Iterator ite = result.iterator();
+		while (ite.hasNext()) {
+			System.out.println(ite.next());
+		}
+		result.close();
+		stream.close();
+		
+		
+		// Map
+		stream = items.stream();		
+		result = stream.map(item -> item + "- Almost");
+		ite = result.iterator();
+		while (ite.hasNext()) {
+			System.out.println(ite.next());
+		}
+		
+		//reduce
+		stream = items.stream();	
+		String data = stream.reduce((acc,item) -> acc +" "+item).get();
+		System.out.println(data);
+	}
+	
+	
+	
+	
 	public void testStreamWithAirport() {
 		List<Airport> data=null;
 		

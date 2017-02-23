@@ -7,7 +7,7 @@ import java.util.Vector;
 /*
  * https://openclassrooms.com/courses/apprenez-a-programmer-en-java/la-genericite-en-java
  */            
-public class DataStruct<T> {
+public class EnumClass<T> {
 	T obj=null;
 	
 	public void  testgenerique(T obj){
@@ -42,10 +42,5 @@ public class DataStruct<T> {
 		}
 		else
 			System.out.println("C'est pas Lundi");
-	}
-	
-	@Deprecated
-	public static void testDeprecated(){
-		System.out.println("call to deprecated method without Warning");
 	}
 }
