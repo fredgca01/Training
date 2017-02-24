@@ -6,6 +6,8 @@ public class ThreadExample {
 
 	  public static void main(String[] args){
 	    System.out.println(Thread.currentThread().getName()+"\n");
+	    
+	    
 	    Counter object = new Counter();
 	    
 	    for(int i=0; i<10; i++){
@@ -18,8 +20,8 @@ public class ThreadExample {
 	        	  e.printStackTrace();
 	          }
 	          
-	          object.add(1);
-	          System.out.println("Thread: " + getName() + " running, count: "+object.count);
+	          long data = object.add(1);
+	          System.out.println("Thread: " + getName() + " running; count: "+object.getCount()+"; local count: "+data);
 	        }
 	      }.start();
 	    }
