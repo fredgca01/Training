@@ -1,4 +1,4 @@
-package desingpattern.singleton;
+package designpattern.singleton;
 
 import java.util.ArrayList;
 import java.util.List;

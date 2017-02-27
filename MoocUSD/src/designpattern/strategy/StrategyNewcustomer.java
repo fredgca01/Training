@@ -1,4 +1,4 @@
-package desingpattern.strategy;
+package designpattern.strategy;
 
 public class StrategyNewcustomer implements Strategy {
 

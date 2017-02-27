@@ -1,4 +1,4 @@
-package desingpattern.builder;
+package designpattern.builder;
 
 /**
  * Concretebuilder

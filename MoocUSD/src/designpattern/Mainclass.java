@@ -1,24 +1,34 @@
-package desingpattern;
+package designpattern;
 
 import java.util.Random;
 
-import desingpattern.builder.HawaiianPizzaBuilder;
-import desingpattern.builder.Pizza;
-import desingpattern.builder.PizzaBuilder;
-import desingpattern.builder.SpicyPizzaBuilder;
-import desingpattern.builder.Waiter;
-import desingpattern.factory.Logger;
-import desingpattern.factory.SysoLoggerCreator;
-import desingpattern.singleton.Government;
-import desingpattern.singleton.Government2;
-import desingpattern.strategy.Sales;
+import designpattern.builder.HawaiianPizzaBuilder;
+import designpattern.builder.Pizza;
+import designpattern.builder.PizzaBuilder;
+import designpattern.builder.SpicyPizzaBuilder;
+import designpattern.builder.Waiter;
+import designpattern.chainresp.Handler;
+import designpattern.factory.Logger;
+import designpattern.factory.SysoLoggerCreator;
+import designpattern.singleton.Government;
+import designpattern.singleton.Government2;
+import designpattern.strategy.Sales;
 
 public class Mainclass {
 
 	public static void main(String[] args) {
-		testFactory();
+		testChainOfResp();
 	}
 	
+	public static void testChainOfResp() {
+		Handler chain_root = new Handler();
+        chain_root.add(new Handler());
+        chain_root.add(new Handler());
+        chain_root.add(new Handler());
+        chain_root.wrap_around(chain_root);
+        for (int i = 1; i < 10; i++)
+          chain_root.handle(i);
+	}
 	
 	public static void testBuilder() {
 		Waiter waiter = new Waiter();

@@ -1,4 +1,4 @@
-package desingpattern.factory;
+package designpattern.factory;
 
 //the abstract Creator
 public abstract class LoggerCreator {

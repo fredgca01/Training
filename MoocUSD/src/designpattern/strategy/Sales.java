@@ -1,4 +1,4 @@
-package desingpattern.strategy;
+package designpattern.strategy;
 
 public class Sales {
 	Context promotioncalculator = new Context();

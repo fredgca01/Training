@@ -1,4 +1,4 @@
-package desingpattern.factory;
+package designpattern.factory;
 
 // Product
 public interface Logger {

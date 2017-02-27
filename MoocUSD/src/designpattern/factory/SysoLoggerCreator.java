@@ -1,4 +1,4 @@
-package desingpattern.factory;
+package designpattern.factory;
 
 //ConcreteCreator
 public class SysoLoggerCreator extends LoggerCreator {

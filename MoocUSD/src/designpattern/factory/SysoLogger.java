@@ -1,4 +1,4 @@
-package desingpattern.factory;
+package designpattern.factory;
 
 //concrete implementation of the Logger (Product)
 public class SysoLogger implements Logger {
