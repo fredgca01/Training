@@ -13,6 +13,9 @@ import designpattern.chainresp.PresidentPP;
 import designpattern.chainresp.PurchaseRequest;
 import designpattern.factory.Logger;
 import designpattern.factory.SysoLoggerCreator;
+import designpattern.observer.Cabine;
+import designpattern.observer.Capteur;
+import designpattern.observer.Moteur;
 import designpattern.singleton.Government;
 import designpattern.singleton.Government2;
 import designpattern.state.DeadState;
@@ -24,9 +27,24 @@ import designpattern.strategy.Sales;
 public class Mainclass {
 
 	public static void main(String[] args) {
-		testState();
+		testObserver();
 	}
 	
+	public static void testObserver() {
+		Cabine instanceCabine = new Cabine();
+        Moteur instanceMoteur = new Moteur();
+        Capteur capteurEtage = new Capteur();
+        capteurEtage.ajouterObservateur(instanceCabine);
+        capteurEtage.ajouterObservateur(instanceMoteur);
+
+        // On simule manuellement une variation (normalement c'est le thread qui s'en charge)
+        capteurEtage.notifierObservateurs();
+        // La cabine et le moteur ont reçu une notification sur leur méthode notifier()
+        
+        capteurEtage.supprimerObservateur(instanceMoteur);
+        System.out.println("Suppression du moteur dans les abonnes");
+        capteurEtage.notifierObservateurs();
+	}
 	
 	public static void testState() {
 		GameContext context = new GameContext();
