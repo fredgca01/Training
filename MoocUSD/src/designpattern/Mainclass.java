@@ -7,7 +7,10 @@ import designpattern.builder.Pizza;
 import designpattern.builder.PizzaBuilder;
 import designpattern.builder.SpicyPizzaBuilder;
 import designpattern.builder.Waiter;
-import designpattern.chainresp.Handler;
+import designpattern.chainresp.DirectorPP;
+import designpattern.chainresp.ManagerPP;
+import designpattern.chainresp.PresidentPP;
+import designpattern.chainresp.PurchaseRequest;
 import designpattern.factory.Logger;
 import designpattern.factory.SysoLoggerCreator;
 import designpattern.singleton.Government;
@@ -21,13 +24,19 @@ public class Mainclass {
 	}
 	
 	public static void testChainOfResp() {
-		Handler chain_root = new Handler();
-        chain_root.add(new Handler());
-        chain_root.add(new Handler());
-        chain_root.add(new Handler());
-        chain_root.wrap_around(chain_root);
-        for (int i = 1; i < 10; i++)
-          chain_root.handle(i);
+		ManagerPP manager = new ManagerPP();
+        DirectorPP director = new DirectorPP();
+        PresidentPP president = new PresidentPP();
+        manager.setSuccessor(director);
+        director.setSuccessor(president);
+
+        Double amount = 750.0;
+        manager.processRequest(new PurchaseRequest(amount, "General"));
+        amount = 7500.0;
+        manager.processRequest(new PurchaseRequest(amount, "General"));
+        amount = 75000.0;
+        manager.processRequest(new PurchaseRequest(amount, "General"));
+
 	}
 	
 	public static void testBuilder() {
@@ -39,6 +48,12 @@ public class Mainclass {
 	    waiter.constructPizza();
 
 	    Pizza pizza = waiter.getPizza();
+	    pizza.printRecipe();
+	    
+	    waiter.setPizzaBuilder( spicy_pizzabuilder );
+	    waiter.constructPizza();
+
+	    pizza = waiter.getPizza();
 	    pizza.printRecipe();
 	}
 	
