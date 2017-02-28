@@ -15,13 +15,35 @@ import designpattern.factory.Logger;
 import designpattern.factory.SysoLoggerCreator;
 import designpattern.singleton.Government;
 import designpattern.singleton.Government2;
+import designpattern.state.DeadState;
+import designpattern.state.GameContext;
+import designpattern.state.HealthyState;
+import designpattern.state.SurvivalState;
 import designpattern.strategy.Sales;
 
 public class Mainclass {
 
 	public static void main(String[] args) {
-		testChainOfResp();
+		testState();
 	}
+	
+	
+	public static void testState() {
+		GameContext context = new GameContext();
+
+		context.setState(new HealthyState());
+		context.gameAction();
+		System.out.println("*****");
+
+		context.setState(new SurvivalState());
+		context.gameAction();
+		System.out.println("*****");
+
+		context.setState(new DeadState());
+		context.gameAction();
+		System.out.println("*****");
+	}
+	
 	
 	public static void testChainOfResp() {
 		ManagerPP manager = new ManagerPP();
