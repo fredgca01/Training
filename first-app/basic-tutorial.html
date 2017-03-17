@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <body ng-app="">
+        <div ng-init="myText='Hello World!'">
+            <h1>{{myText}}</h1>
+            <p>ng-init directive initializes application data</p>
+            <p>ng-init directive has created an AngularJS variable, which you can use in the application.</p>
+            <p>My first expression: {{ 5 + 5 }}</p>
+        </div>
+        <div ng-init="quantity=1;cost=5">
+            <p>Total in dollar: {{ quantity * cost }}</p>
+            <p>Total in dollar: <span ng-bind="quantity * cost"></span></p>
+        </div>
+        <div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}">
+           <p>The name is {{ person.lastName }}</p>
+        </div>  
+        <div ng-init="myTestValue='Fred'">
+            <p>
+                <input type="text" ng-model="myTestValue"/>
+            </p>
+            <p> {{myTestValue | uppercase }}</p>
+            <p>The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.</p>
+            <p> Filters can be added in AngularJS to format data.</p>
+            <button ng-click="myTestValue='magiiie'">
+        </div>
+        <div ng-init="names=[
+            {name:'Jani',country:'Norway'},
+            {name:'Hege',country:'Sweden'},
+            {name:'Kai',country:'Denmark'}]">
+            <ul>
+                <li ng-repeat="x in names | orderBy:'country'">
+                    {{ x.name + ', ' + x.country }}
+                </li>
+            </ul>
+        </div>
+        <form ng-app="" name="myForm">
+            Email:
+            <input type="email" name="myAddress" ng-model="text">
+            <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+        </form> 
+    </body>
+</html>
