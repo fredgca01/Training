@@ -1,3 +1,3 @@
 # Training
 - Test sur GIT
-- Test merge remote
+- test merge
