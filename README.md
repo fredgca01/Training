@@ -1,1 +1,2 @@
 # Training
+- Test sur GIT
