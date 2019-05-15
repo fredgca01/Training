@@ -5,9 +5,10 @@ using static System.Math;
 namespace csharpsuccintly {   
     class Greetings {
         static void Main(){
-            Console.WriteLine("Greetings !: "+Calc.Pythagorean(2,54));
-            StringAndOperator.write();
-            ArrayAndList.write();
+            //Console.WriteLine("Greetings !: "+Calc.Pythagorean(2,54));
+            //StringAndOperator.write();
+            //ArrayAndList.write();
+            Calculator.calculate();
         }
     }
 
