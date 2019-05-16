@@ -19,12 +19,8 @@ namespace csharpsuccintly {
                     quit=true;
                 }
                 if (!quit){
-                    Console.Write("First number ?: ");
-                    String numInput = Console.ReadLine();
-                    numOne = Double.Parse(numInput);
-                    Console.Write("Second number ?: ");
-                    numInput = Console.ReadLine();
-                    numTwo = Double.Parse(numInput);
+                    numOne = getNumber("First");
+                    numTwo = getNumber("Second");
                 }
                 switch (firstChar){
                     case('A'):
@@ -56,6 +52,12 @@ namespace csharpsuccintly {
                     Console.WriteLine("Bye !");
             }
             while (!quit);
+        }
+
+        public static double getNumber(String texte){
+            Console.Write($"{texte} Number: ");
+            String numInput = Console.ReadLine();
+            return Double.Parse(numInput);    
         }
     }
 }

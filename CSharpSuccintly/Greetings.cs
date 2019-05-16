@@ -8,7 +8,19 @@ namespace csharpsuccintly {
             //Console.WriteLine("Greetings !: "+Calc.Pythagorean(2,54));
             //StringAndOperator.write();
             //ArrayAndList.write();
-            Calculator.calculate();
+            //Calculator.calculate();
+            
+            /*Calculator1 calc = new Calculator1();
+            calc.GetNumber("First");
+            calc.GetNumber("Second");
+            calc.AddNumbers();
+            calc.PrintResult();*/
+
+            PropertiesSample2 sample = new PropertiesSample2();
+            sample.email = "test";
+            Console.WriteLine($"{sample.email}");
+            sample.email = " ";
+            Console.WriteLine($"{sample.email}");
         }
     }
 

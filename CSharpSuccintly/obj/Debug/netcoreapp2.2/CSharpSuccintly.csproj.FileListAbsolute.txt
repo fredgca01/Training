@@ -1,11 +1,11 @@
+/home/fred/Workspace/Training/CSharpSuccintly/obj/Debug/netcoreapp2.2/CSharpSuccintly.csprojAssemblyReference.cache
+/home/fred/Workspace/Training/CSharpSuccintly/obj/Debug/netcoreapp2.2/CSharpSuccintly.csproj.CoreCompileInputs.cache
+/home/fred/Workspace/Training/CSharpSuccintly/obj/Debug/netcoreapp2.2/CSharpSuccintly.AssemblyInfoInputs.cache
+/home/fred/Workspace/Training/CSharpSuccintly/obj/Debug/netcoreapp2.2/CSharpSuccintly.AssemblyInfo.cs
 /home/fred/Workspace/Training/CSharpSuccintly/bin/Debug/netcoreapp2.2/CSharpSuccintly.deps.json
 /home/fred/Workspace/Training/CSharpSuccintly/bin/Debug/netcoreapp2.2/CSharpSuccintly.runtimeconfig.json
 /home/fred/Workspace/Training/CSharpSuccintly/bin/Debug/netcoreapp2.2/CSharpSuccintly.runtimeconfig.dev.json
 /home/fred/Workspace/Training/CSharpSuccintly/bin/Debug/netcoreapp2.2/CSharpSuccintly.dll
 /home/fred/Workspace/Training/CSharpSuccintly/bin/Debug/netcoreapp2.2/CSharpSuccintly.pdb
-/home/fred/Workspace/Training/CSharpSuccintly/obj/Debug/netcoreapp2.2/CSharpSuccintly.csprojAssemblyReference.cache
-/home/fred/Workspace/Training/CSharpSuccintly/obj/Debug/netcoreapp2.2/CSharpSuccintly.csproj.CoreCompileInputs.cache
-/home/fred/Workspace/Training/CSharpSuccintly/obj/Debug/netcoreapp2.2/CSharpSuccintly.AssemblyInfoInputs.cache
-/home/fred/Workspace/Training/CSharpSuccintly/obj/Debug/netcoreapp2.2/CSharpSuccintly.AssemblyInfo.cs
 /home/fred/Workspace/Training/CSharpSuccintly/obj/Debug/netcoreapp2.2/CSharpSuccintly.dll
 /home/fred/Workspace/Training/CSharpSuccintly/obj/Debug/netcoreapp2.2/CSharpSuccintly.pdb
